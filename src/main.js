@@ -84,17 +84,17 @@ function runLoader() {
     const tl = gsap.timeline({
       onComplete: () => { loader.remove(); resolve(); },
     });
-    tl.to(rpm, {
-      v: 9000,
-      duration: 1.6,
-      ease: "power3.inOut",
-      onUpdate: () => {
-        loaderRpm.textContent = Math.round(rpm.v).toLocaleString("en-US");
-        loaderRpm.style.color = rpm.v > 8200 ? "#ff2233" : "";
-      },
-    })
-      .to(loaderBar, { width: "100%", duration: 1.6, ease: "power3.inOut" }, 0)
-      .to(loader, { yPercent: -100, duration: 0.9, ease: "power4.inOut" }, "+=0.25");
+    tl.from(".loader__shield", { opacity: 0, y: 16, duration: 0.7, ease: "power3.out" })
+      .to(rpm, {
+        v: 9000,
+        duration: 1.5,
+        ease: "power3.inOut",
+        onUpdate: () => {
+          loaderRpm.textContent = Math.round(rpm.v).toLocaleString("en-US");
+        },
+      }, 0.15)
+      .to(loaderBar, { width: "100%", duration: 1.5, ease: "power3.inOut" }, 0.15)
+      .to(loader, { yPercent: -100, duration: 0.9, ease: "power4.inOut" }, "+=0.2");
   });
 }
 
@@ -121,7 +121,8 @@ function initHero() {
 
   // Title drifts apart and dissolves as the car starts to turn
   tl.to("#heroTitle .hero__nine", { yPercent: -160, opacity: 0, ease: "none", duration: 0.3 }, 0.05)
-    .to("#heroTitle .hero__gt3", { yPercent: -40, letterSpacing: "0.12em", opacity: 0, ease: "none", duration: 0.35 }, 0.05)
+    .to("#heroTitle .hero__gt3", { yPercent: -40, letterSpacing: "0.06em", opacity: 0, ease: "none", duration: 0.35 }, 0.05)
+    .to("#heroGhost", { yPercent: -24, opacity: 0, ease: "none", duration: 0.3 }, 0.05)
     .to("#heroEyebrow, #heroTag", { opacity: 0, y: -30, ease: "none", duration: 0.2 }, 0.02)
     .to("#heroFoot", { opacity: 0, ease: "none", duration: 0.15 }, 0.12)
     // Late line lands while the car settles into its final angle
@@ -161,15 +162,34 @@ function initManifesto() {
 }
 
 /* ------------------------------------------------------------
-   Theme morph: studio light → track dark
+   CURTAIN: a dark disc pops up from the centre and swallows the
+   screen — the theme flips underneath it, hidden by the cover.
+   Scroll-driven (scrub), so it stays under reduced motion.
 ------------------------------------------------------------- */
-function initThemeMorph() {
-  ScrollTrigger.create({
-    trigger: "#specs",
-    start: "top 55%",
-    onEnter: () => document.body.classList.add("theme-dark"),
-    onLeaveBack: () => document.body.classList.remove("theme-dark"),
+function initCurtain() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#curtain",
+      start: "top top",
+      end: "+=160%",
+      pin: true,
+      scrub: true,
+      onUpdate: (self) => {
+        document.body.classList.toggle("theme-dark", self.progress > 0.32);
+      },
+    },
   });
+
+  tl.fromTo("#curtainDisc",
+      { scale: 0 },
+      { scale: 1, duration: 0.45, ease: "power2.in" }, 0)
+    .fromTo("#curtainContent",
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 0.25, ease: "none" }, 0.42)
+    .to("#curtainContent",
+      { opacity: 0, y: -40, duration: 0.18, ease: "none" }, 0.8)
+    .to("#curtainDisc",
+      { opacity: 0, duration: 0.15, ease: "none" }, 0.85);
 }
 
 /* ------------------------------------------------------------
@@ -308,6 +328,20 @@ function initDynamics() {
     { trigger: ".dynamics__heading", start: "top 85%" });
 }
 
+function initFilmstrip() {
+  if (!reduceMotion) {
+    gsap.fromTo("#filmstripImg",
+      { yPercent: -10 },
+      {
+        yPercent: 0,
+        ease: "none",
+        scrollTrigger: { trigger: "#filmstrip", start: "top bottom", end: "bottom top", scrub: true },
+      });
+  }
+  reveal(".filmstrip__caption", { opacity: 0, y: 40, duration: 1, ease: "power3.out" },
+    { trigger: "#filmstrip", start: "top 60%" });
+}
+
 function initPackages() {
   reveal(".pack-card", { opacity: 0, y: 70, duration: 1, stagger: 0.14, ease: "power3.out" },
     { trigger: ".packages__grid", start: "top 82%" });
@@ -379,12 +413,13 @@ async function boot() {
   await document.fonts.ready;
   initHero();
   initManifesto();
-  initThemeMorph();
+  initCurtain();
   initSpecs();
   initAero();
   initEngine();
   initInterior();
   initDynamics();
+  initFilmstrip();
   initPackages();
   initOutro();
   initNav();

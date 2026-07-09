@@ -86,7 +86,7 @@ export function createEngineScene(canvas, { lowPower = false } = {}) {
   scene.add(points);
 
   let intensity = 0;
-  let running = true;
+  let running = false; // resumed by ScrollTrigger when the section nears view
   const clock = new THREE.Clock();
 
   function resize() {

@@ -7,26 +7,28 @@
   <meta name="description" content="911 GT3 RS. 525 cv. 3.2 s to 100. 9,000 rpm. A high-performance sports car engineered for the racetrack — and approved for the road." />
   <meta property="og:title" content="Porsche 911 GT3 RS — Formed by the Wind" />
   <meta property="og:description" content="525 cv · 3.2 s · 296 km/h · 9,000 rpm. A cinematic tribute to the 911 GT3 RS." />
-  <meta property="og:image" content="/img/hero-poster.jpg" />
-  <link rel="icon" type="image/jpeg" href="/img/hero-poster.jpg" />
+  <meta property="og:image" content="/img/dark-rear.jpg" />
+  <link rel="icon" type="image/png" href="/img/shield.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- ============ PRELOADER ============ -->
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader__inner">
-      <div class="loader__rpm"><span id="loaderRpm">0</span><em>rpm</em></div>
+      <img class="loader__shield" src="/img/shield.png" alt="" width="72" />
       <div class="loader__bar"><span id="loaderBar"></span></div>
-      <p class="loader__label">Warming up the flat-six</p>
+      <p class="loader__label"><span id="loaderRpm">0</span> rpm</p>
     </div>
   </div>
 
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
-    <a class="nav__brand" href="#hero" data-nav>Porsche</a>
+    <a class="nav__brand" href="#hero" data-nav aria-label="Porsche">
+      <img src="/img/wordmark.png" alt="Porsche" />
+    </a>
     <p class="nav__model">911 GT3 RS <span>· 992</span></p>
     <a class="nav__cta" href="#configure" data-nav>Enquire</a>
   </header>
@@ -38,11 +40,12 @@
       <div class="hero__media">
         <video id="heroVideo" muted playsinline preload="auto" poster="/img/hero-poster.jpg"></video>
       </div>
+      <div class="hero__ghost" id="heroGhost" aria-hidden="true">GT3 RS</div>
       <div class="hero__overlay">
-        <p class="hero__eyebrow" id="heroEyebrow">Porsche presents</p>
+        <p class="hero__eyebrow" id="heroEyebrow">Porsche presents · 992</p>
         <h1 class="hero__title" id="heroTitle" aria-label="911 GT3 RS">
           <span class="hero__nine">911</span>
-          <span class="hero__gt3">GT3&nbsp;RS</span>
+          <span class="hero__gt3">GT3 <i>RS</i></span>
         </h1>
         <p class="hero__tag" id="heroTag">Engineered for the racetrack. <i>Approved for the road.</i></p>
       </div>
@@ -66,7 +69,19 @@
       <p class="manifesto__foot">— Developed in Weissach. Proven in Flacht.</p>
     </section>
 
-    <!-- ============ ACT III — SPECS (theme flips to dark) ============ -->
+    <!-- ============ CURTAIN — light to dark ============ -->
+    <section class="curtain" id="curtain">
+      <div class="curtain__stage">
+        <div class="curtain__disc" id="curtainDisc"></div>
+        <div class="curtain__content" id="curtainContent">
+          <img class="curtain__shield" src="/img/shield.png" alt="" width="64" />
+          <p class="curtain__line">And now — <i>the dark</i>.</p>
+          <p class="curtain__sub">Act II · The racetrack</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACT III — SPECS (dark) ============ -->
     <section class="specs" id="specs">
       <p class="section-index">02 — The numbers</p>
       <h2 class="specs__heading"><span>No filter.</span> <span>No mercy.</span> <span><i>No turbo.</i></span></h2>
@@ -112,25 +127,25 @@
         <div class="aero__track" id="aeroTrack">
           <article class="aero-panel">
             <span class="aero-panel__num">A·01</span>
-            <figure class="aero-panel__fig"><img src="/img/ext-2.2.jpg" alt="Porsche 911 GT3 RS rear three-quarter studio view" loading="lazy" /></figure>
+            <figure class="aero-panel__fig"><img src="/img/dark-wing.jpg" alt="Carbon fibre rear wing of the 911 GT3 RS in a dark studio" loading="lazy" /></figure>
             <h3>Porsche Active Aerodynamics</h3>
             <p>The front diffuser and rear wing adjust automatically to the driving situation — in fractions of a second. Full downforce for the corner. Every corner.</p>
           </article>
           <article class="aero-panel">
             <span class="aero-panel__num">A·02</span>
-            <figure class="aero-panel__fig"><img src="/img/ext-3.2.jpg" alt="Porsche 911 GT3 RS side profile studio view" loading="lazy" /></figure>
+            <figure class="aero-panel__fig"><img src="/img/dark-rear.jpg" alt="Porsche 911 GT3 RS in a dark studio with red glow" loading="lazy" /></figure>
             <h3>Drag Reduction System</h3>
             <p>Straight ahead, the wing flattens and air resistance collapses. DRS — technology carried straight over from top-flight motorsport.</p>
           </article>
           <article class="aero-panel">
             <span class="aero-panel__num">A·03</span>
-            <figure class="aero-panel__fig"><img src="/img/ext-4.5.jpg" alt="Porsche 911 GT3 RS front studio view" loading="lazy" /></figure>
+            <figure class="aero-panel__fig"><img src="/img/dark-front.jpg" alt="Porsche 911 GT3 RS front view with headlights on in the dark" loading="lazy" /></figure>
             <h3>S-Duct &amp; central radiator</h3>
             <p>Like a GT racing car, one large central radiator sits where the front luggage compartment used to be. The S-shaped airflow gives the concept its name — and the brakes their breath.</p>
           </article>
           <article class="aero-panel">
             <span class="aero-panel__num">A·04</span>
-            <figure class="aero-panel__fig"><img src="/img/ext-1.2.jpg" alt="Porsche 911 GT3 RS studio view" loading="lazy" /></figure>
+            <figure class="aero-panel__fig"><img src="/img/dark-side.jpg" alt="Porsche 911 GT3 RS side profile under a studio softbox" loading="lazy" /></figure>
             <h3>Aero blades &amp; wide body</h3>
             <p>Blades on the front axle add up to 40 kg of downforce at top speed. The wide Turbo body with side intakes makes room for wider wheels — and a sharper attitude.</p>
           </article>
@@ -212,6 +227,14 @@
       </ul>
     </section>
 
+    <!-- ============ FILMSTRIP — full-bleed image break ============ -->
+    <section class="filmstrip" id="filmstrip">
+      <figure class="filmstrip__fig">
+        <img id="filmstripImg" src="/img/dark-rear.jpg" alt="Porsche 911 GT3 RS in a dark studio, red glow tracing the bodywork" loading="lazy" />
+      </figure>
+      <p class="filmstrip__caption">Light leaves. <i>Downforce stays.</i></p>
+    </section>
+
     <!-- ============ ACT VIII — PACKAGES ============ -->
     <section class="packages" id="packages">
       <p class="section-index">07 — Go further</p>
@@ -240,6 +263,7 @@
 
     <!-- ============ OUTRO / FOOTER ============ -->
     <footer class="outro" id="configure">
+      <img class="outro__shield" src="/img/shield.png" alt="Porsche crest" width="56" />
       <p class="outro__kicker">911 GT3 RS · 992 generation · gasoline · rear-wheel drive</p>
       <a class="outro__cta" href="https://configurator.porsche.com/pt-BR/mode/model/992850" target="_blank" rel="noopener">
         <span class="outro__ctaText">Configure yours</span>
