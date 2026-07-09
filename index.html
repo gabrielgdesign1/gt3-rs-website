@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porsche 911 GT3 RS — Formed by the Wind</title>
+  <meta name="description" content="911 GT3 RS. 525 cv. 3.2 s to 100. 9,000 rpm. A high-performance sports car engineered for the racetrack — and approved for the road." />
+  <meta property="og:title" content="Porsche 911 GT3 RS — Formed by the Wind" />
+  <meta property="og:description" content="525 cv · 3.2 s · 296 km/h · 9,000 rpm. A cinematic tribute to the 911 GT3 RS." />
+  <meta property="og:image" content="/img/hero-poster.jpg" />
+  <link rel="icon" type="image/jpeg" href="/img/hero-poster.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__rpm"><span id="loaderRpm">0</span><em>rpm</em></div>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+      <p class="loader__label">Warming up the flat-six</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero" data-nav>Porsche</a>
+    <p class="nav__model">911 GT3 RS <span>· 992</span></p>
+    <a class="nav__cta" href="#configure" data-nav>Enquire</a>
+  </header>
+
+  <main id="smooth-content">
+
+    <!-- ============ ACT I — HERO (scroll-scrub video) ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <video id="heroVideo" muted playsinline preload="auto" poster="/img/hero-poster.jpg"></video>
+      </div>
+      <div class="hero__overlay">
+        <p class="hero__eyebrow" id="heroEyebrow">Porsche presents</p>
+        <h1 class="hero__title" id="heroTitle" aria-label="911 GT3 RS">
+          <span class="hero__nine">911</span>
+          <span class="hero__gt3">GT3&nbsp;RS</span>
+        </h1>
+        <p class="hero__tag" id="heroTag">Engineered for the racetrack. <i>Approved for the road.</i></p>
+      </div>
+      <div class="hero__late" id="heroLate">
+        <p><i>Formed</i> by the wind.</p>
+      </div>
+      <div class="hero__foot" id="heroFoot">
+        <div class="hero__spec"><b>525</b> cv</div>
+        <div class="hero__spec"><b>3.2</b> s — 0 to 100</div>
+        <div class="hero__spec"><b>296</b> km/h</div>
+        <div class="hero__cue"><span></span>Scroll</div>
+      </div>
+    </section>
+
+    <!-- ============ ACT II — MANIFESTO ============ -->
+    <section class="manifesto" id="manifesto">
+      <p class="section-index">01 — The mindset</p>
+      <h2 class="manifesto__text" id="manifestoText">
+        Athletes know that peak performance demands the unshakable will to question <i>everything</i>. With that mindset, Porsche keeps pushing the limits of what is possible.
+      </h2>
+      <p class="manifesto__foot">— Developed in Weissach. Proven in Flacht.</p>
+    </section>
+
+    <!-- ============ ACT III — SPECS (theme flips to dark) ============ -->
+    <section class="specs" id="specs">
+      <p class="section-index">02 — The numbers</p>
+      <h2 class="specs__heading"><span>No filter.</span> <span>No mercy.</span> <span><i>No turbo.</i></span></h2>
+      <div class="specs__grid">
+        <article class="spec-card spec-card--wide">
+          <span class="spec-card__value"><b data-count="9000" data-format="grouped">0</b></span>
+          <span class="spec-card__unit">rpm — the redline that sets the pace</span>
+        </article>
+        <article class="spec-card">
+          <span class="spec-card__value"><b data-count="525">0</b></span>
+          <span class="spec-card__unit">cv · 386 kW</span>
+        </article>
+        <article class="spec-card">
+          <span class="spec-card__value"><b data-count="3.2" data-decimals="1">0</b><em>s</em></span>
+          <span class="spec-card__unit">0 – 100 km/h</span>
+        </article>
+        <article class="spec-card">
+          <span class="spec-card__value"><b data-count="296">0</b></span>
+          <span class="spec-card__unit">km/h top speed</span>
+        </article>
+        <article class="spec-card">
+          <span class="spec-card__value"><b data-count="1450" data-format="grouped">0</b></span>
+          <span class="spec-card__unit">kg unladen — carbon everywhere</span>
+        </article>
+        <article class="spec-card">
+          <span class="spec-card__value"><b data-count="7">0</b><em>PDK</em></span>
+          <span class="spec-card__unit">gears, track-hardened</span>
+        </article>
+        <article class="spec-card">
+          <span class="spec-card__value"><b data-count="4.0" data-decimals="1">0</b><em>L</em></span>
+          <span class="spec-card__unit">naturally aspirated boxer six</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ACT IV — AERODYNAMICS (horizontal scroll) ============ -->
+    <section class="aero" id="aero">
+      <div class="aero__pin">
+        <div class="aero__head">
+          <p class="section-index">03 — Aerodynamics</p>
+          <h2 class="aero__heading">The air is a <i>component</i>.</h2>
+        </div>
+        <div class="aero__track" id="aeroTrack">
+          <article class="aero-panel">
+            <span class="aero-panel__num">A·01</span>
+            <figure class="aero-panel__fig"><img src="/img/ext-2.2.jpg" alt="Porsche 911 GT3 RS rear three-quarter studio view" loading="lazy" /></figure>
+            <h3>Porsche Active Aerodynamics</h3>
+            <p>The front diffuser and rear wing adjust automatically to the driving situation — in fractions of a second. Full downforce for the corner. Every corner.</p>
+          </article>
+          <article class="aero-panel">
+            <span class="aero-panel__num">A·02</span>
+            <figure class="aero-panel__fig"><img src="/img/ext-3.2.jpg" alt="Porsche 911 GT3 RS side profile studio view" loading="lazy" /></figure>
+            <h3>Drag Reduction System</h3>
+            <p>Straight ahead, the wing flattens and air resistance collapses. DRS — technology carried straight over from top-flight motorsport.</p>
+          </article>
+          <article class="aero-panel">
+            <span class="aero-panel__num">A·03</span>
+            <figure class="aero-panel__fig"><img src="/img/ext-4.5.jpg" alt="Porsche 911 GT3 RS front studio view" loading="lazy" /></figure>
+            <h3>S-Duct &amp; central radiator</h3>
+            <p>Like a GT racing car, one large central radiator sits where the front luggage compartment used to be. The S-shaped airflow gives the concept its name — and the brakes their breath.</p>
+          </article>
+          <article class="aero-panel">
+            <span class="aero-panel__num">A·04</span>
+            <figure class="aero-panel__fig"><img src="/img/ext-1.2.jpg" alt="Porsche 911 GT3 RS studio view" loading="lazy" /></figure>
+            <h3>Aero blades &amp; wide body</h3>
+            <p>Blades on the front axle add up to 40 kg of downforce at top speed. The wide Turbo body with side intakes makes room for wider wheels — and a sharper attitude.</p>
+          </article>
+          <article class="aero-panel aero-panel--quote">
+            <p class="aero-panel__quote">Headwind is the biggest rival on the hunt for lap times. The GT3&nbsp;RS uses it — <i>on every single component.</i></p>
+          </article>
+        </div>
+        <div class="aero__progress"><span id="aeroProgress"></span></div>
+      </div>
+    </section>
+
+    <!-- ============ ACT V — ENGINE (Three.js) ============ -->
+    <section class="engine" id="engine">
+      <canvas id="engineCanvas" aria-hidden="true"></canvas>
+      <div class="engine__content">
+        <p class="section-index">04 — The engine</p>
+        <h2 class="engine__heading">Setting the pace:<br /><span class="engine__rpm" id="engineRpm">0</span><span class="engine__rpmUnit">rpm</span></h2>
+        <p class="engine__copy">
+          The 4.0-litre naturally aspirated boxer six revs like a race engine because it is one — four-valve tech, rigid valve drive, forged pistons, titanium connecting rods and dry-sump lubrication with a separate oil tank. Individual throttle valves feed it. A lightweight stainless-steel sport exhaust lets it speak. <i>Unfiltered.</i>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ACT VI — INTERIOR (scroll-scrub video) ============ -->
+    <section class="interior" id="interior">
+      <div class="interior__media">
+        <video id="interiorVideo" muted playsinline preload="auto" poster="/img/interior-poster.jpg"></video>
+      </div>
+      <div class="interior__head">
+        <p class="section-index section-index--light">05 — The cockpit</p>
+        <h2 class="interior__heading">Take a <i>seat</i>.</h2>
+      </div>
+      <div class="interior__captions">
+        <div class="interior-caption" data-caption="0">
+          <h3>Built around the driver</h3>
+          <p>Alcantara, carbon fibre and exactly nothing you don't need at 9,000 rpm.</p>
+        </div>
+        <div class="interior-caption" data-caption="1">
+          <h3>Individual to the last setting</h3>
+          <p>Wet asphalt, tight corners, your own style — three extra mode switches on the wheel tune the chassis control systems to the moment.</p>
+        </div>
+        <div class="interior-caption" data-caption="2">
+          <h3>Motorsport, homologated</h3>
+          <p>Track-hardened 7-speed PDK. Full bucket seats. A rev counter that only gets interesting after eight thousand.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACT VII — DYNAMICS ============ -->
+    <section class="dynamics" id="dynamics">
+      <p class="section-index">06 — Chassis</p>
+      <h2 class="dynamics__heading">Maximum <i>performance</i>, wheel by wheel.</h2>
+      <ul class="dynamics__list">
+        <li class="dyn-row">
+          <span class="dyn-row__num">D·01</span>
+          <h3>PTV Plus</h3>
+          <p>Porsche Torque Vectoring Plus with a fully variable, electronically controlled rear differential lock — more traction, more lateral punch, more stability under load change.</p>
+        </li>
+        <li class="dyn-row">
+          <span class="dyn-row__num">D·02</span>
+          <h3>PASM &amp; PSM</h3>
+          <p>Active Suspension Management regulates damping force at every single wheel. Stability Management keeps it all pointed where you're looking.</p>
+        </li>
+        <li class="dyn-row">
+          <span class="dyn-row__num">D·03</span>
+          <h3>Rear-axle steering</h3>
+          <p>Agility in slow corners, unshakable calm at speed — the rear wheels steer with you, into the apex and past the field.</p>
+        </li>
+        <li class="dyn-row">
+          <span class="dyn-row__num">D·04</span>
+          <h3>Motorsport brakes</h3>
+          <p>Six-piston aluminium monobloc calipers up front, four-piston at the rear. Optional PCCB ceramics for even less weight and even later braking points.</p>
+        </li>
+        <li class="dyn-row">
+          <span class="dyn-row__num">D·05</span>
+          <h3>Track-wide chassis</h3>
+          <p>Ball-jointed chassis mounts, anti-dive geometry and a wide track — optimized for the circuit, faithful on the road.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ ACT VIII — PACKAGES ============ -->
+    <section class="packages" id="packages">
+      <p class="section-index">07 — Go further</p>
+      <h2 class="packages__heading">Every gram <i>counts</i>.</h2>
+      <div class="packages__grid">
+        <article class="pack-card" data-tilt>
+          <div class="pack-card__top">
+            <span class="pack-card__badge">Weissach Package</span>
+            <span class="pack-card__delta">−15 kg</span>
+          </div>
+          <h3>The battle for thousandths</h3>
+          <p>Exposed carbon roll cage in satin finish. CFRP anti-roll bars, coupling rods and shear panel. Motorsport-level protection — at road-car weight.</p>
+          <span class="pack-card__ghost">RS</span>
+        </article>
+        <article class="pack-card" data-tilt>
+          <div class="pack-card__top">
+            <span class="pack-card__badge">Clubsport Package</span>
+            <span class="pack-card__delta">No extra cost</span>
+          </div>
+          <h3>Cage. Harness. Go.</h3>
+          <p>Bolted steel rollover bar behind the front seats in black or Guards Red, plus a six-point racing harness for the driver. The track day starts at the factory.</p>
+          <span class="pack-card__ghost">CS</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ OUTRO / FOOTER ============ -->
+    <footer class="outro" id="configure">
+      <p class="outro__kicker">911 GT3 RS · 992 generation · gasoline · rear-wheel drive</p>
+      <a class="outro__cta" href="https://configurator.porsche.com/pt-BR/mode/model/992850" target="_blank" rel="noopener">
+        <span class="outro__ctaText">Configure yours</span>
+        <span class="outro__ctaArrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16m0 0-6-6m6 6-6 6"/></svg>
+        </span>
+      </a>
+      <div class="outro__ghost" aria-hidden="true">GT3&nbsp;RS</div>
+      <div class="outro__meta">
+        <p>An unofficial cinematic tribute. Vehicle data from <a href="https://www.porsche.com/brazil/pt/models/911/911-gt3-rs/911-gt3-rs/" target="_blank" rel="noopener">porsche.com</a>.<br />Not affiliated with Dr. Ing. h.c. F. Porsche AG.</p>
+        <p class="outro__credits">Design &amp; code — 2026</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
